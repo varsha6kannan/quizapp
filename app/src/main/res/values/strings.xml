@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">madlab</string>
+    <string-array name="Topic">
+        <item>Sports</item>
+        <item>Entertainment</item>
+        <item>Outer Space</item>
+    </string-array>
+</resources>
