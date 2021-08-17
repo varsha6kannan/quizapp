@@ -45,7 +45,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return;
                 }
                 else{
+                    String value = myspinner.getSelectedItem().toString();
                     Intent intu=new Intent(MainActivity.this,quizpage.class);
+                    intu.putExtra("category", value);
+                    intu.putExtra("userName", username.getText().toString());
                     startActivity(intu);
                 }
             }
@@ -69,7 +72,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             switch(view.getId()) {
                 case R.id.play:
 
-                    MainActivity.this.startActivity(i);
+                    String user=username.getText().toString();
+
+                    i.putExtra("userName",user);
+                    startActivity(i);
+
                     break;
                 case R.id.high:
                     String uname=username.getText().toString();
